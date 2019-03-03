@@ -10,31 +10,33 @@ public abstract class Personne {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(length = 45 ,  nullable=true)
+	@Column(length = 45, nullable = true)
 	private String nom;
 	
-	@Column(length = 45 ,  nullable=true)
+	@Column(length = 45, nullable = true)
 	private String prenom;
 	
 	@Embedded
 	private Contact contact;
 
+	public int getId() {
+		return id;
+	} 
 	
-	
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public Contact getContact() {
@@ -45,10 +47,5 @@ public abstract class Personne {
 		this.contact = contact;
 	}
 
-	public int getId() {
-		return id;
-	} 
-	
-	
-	
+
 }
