@@ -44,10 +44,10 @@ public class Navigant extends Personnel {
 	}
 	
 	@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Navigant navigant = (Navigant) o;
+    public boolean equals(Object n) {
+        if (this == n) return true;
+        if (n == null || getClass() != n.getClass()) return false;
+        Navigant navigant = (Navigant) n;
         return Objects.equals(typePersonnel, navigant.typePersonnel);
     }
  
