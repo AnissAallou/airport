@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Specificite_Avion")
+@Table(name = "specificite_avion")
 public class SpecificiteAvion {
 
 
@@ -16,30 +16,34 @@ public class SpecificiteAvion {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(length = 45 ,  nullable=false)
-	private String marqie;
+	@Column(length = 45,  nullable = false)
+	private String marque;
 	
-	@Column(length = 45 ,  nullable=false)
+	@Column(length = 45,  nullable = false)
 	private String type;
 	
-	@Column(length = 45 ,  name= "passager_max")
+	@Column(length = 45 ,  name = "passager_max")
 	private int passagerMax;
 	
-	@Column(length = 45 ,  name= "volume_reservoir")
+	@Column(length = 45 ,  name = "volume_reservoir")
 	private int volumeReservoir;
 	
-	@Column(length = 45, name= "consoMoyenne")
-	private int consoMoyenne;
+	@Column(length = 45, name = "consommationMoyenne")
+	private int consommationMoyenne;
 
-	@Column(length = 45 ,  name= "surConsomation")
-	private int surConsomation;
-
-	public String getMarqie() {
-		return marqie;
+	@Column(length = 45, name = "surConsommation")
+	private int surConsommation;
+	
+	public int getId() {
+		return id;
 	}
 
-	public void setMarqie(String marqie) {
-		this.marqie = marqie;
+	public String getMarque() {
+		return marque;
+	}
+
+	public void setMarque(String marque) {
+		this.marque = marque;
 	}
 
 	public String getType() {
@@ -66,25 +70,23 @@ public class SpecificiteAvion {
 		this.volumeReservoir = volumeReservoir;
 	}
 
-	public int getConsoMoyenne() {
-		return consoMoyenne;
+	public int getConsommationMoyenne() {
+		return consommationMoyenne;
 	}
 
-	public void setConsoMoyenne(int consoMoyenne) {
-		this.consoMoyenne = consoMoyenne;
+	public void setConsommationMoyenne(int consommationMoyenne) {
+		this.consommationMoyenne = consommationMoyenne;
 	}
 
-	public int getSurConsomation() {
-		return surConsomation;
+	public int getSurconsommation() {
+		return surconsommation;
 	}
 
-	public void setSurConsomation(int surConsomation) {
-		this.surConsomation = surConsomation;
+	public void setSurconsommation(int surconsommation) {
+		this.surconsommation = surconsommation;
 	}
 
-	public int getId() {
-		return id;
-	}
+
 	
 	
 	
