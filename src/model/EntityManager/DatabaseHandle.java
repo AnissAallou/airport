@@ -14,7 +14,7 @@ public class DatabaseHandle {
 	{
 		if (entityManager == null || !entityManager.isOpen())
 		{
-			entityManager = Persistence.createEntityManagerFactory("tp_aeroport").createEntityManager();
+			entityManager = Persistence.createEntityManagerFactory("airport").createEntityManager();
 		}
 		
 		return entityManager;
