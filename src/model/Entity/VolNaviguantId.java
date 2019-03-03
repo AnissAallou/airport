@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class VolNaviguant implements Serializable{
+public class IdVolNaviguant implements Serializable{
 		
 		// vol = post
 	
@@ -17,9 +17,9 @@ public class VolNaviguant implements Serializable{
 	    @Column(name = "id_naviguant")
 	    private int idNaviguant;
 	    
-	    public VolNaviguant() {}
+	    public IdVolNaviguant() {}
 	    
-	    public VolNaviguant(int idVol,int idNaviguant) {
+	    public IdVolNaviguant(int idVol,int idNaviguant) {
 	        this.idVol = idVol;
 	        this.idNaviguant = idNaviguant;
 	    }
@@ -31,7 +31,7 @@ public class VolNaviguant implements Serializable{
 	        if (n == null || getClass() != n.getClass())
 	            return false;
 	 
-	        VolNaviguant that = (VolNaviguant) n;
+	        IdVolNaviguant that = (IdVolNaviguant) n;
 	        return Objects.equals(idVol, that.idVol) &&
 	               Objects.equals(idNaviguant, that.idNaviguant);
 	    }
