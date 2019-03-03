@@ -4,53 +4,40 @@ import javax.persistence.*;
 
 @Embeddable
 public class Contact {
-
-
 	
-	@Column( nullable=true, length = 45)
-	private String tel;
+	@Column( nullable = true, length = 50)
+	private String telephone;
 	
-	@Column( nullable=true)
-	private String rue;
+	@Column( nullable = true)
+	private String street;
 	
 	@Column( nullable=true)
-	private String Ville;
+	private String city;
 	
-	@Column( nullable=true, name = "code_postal")
+	@Column( nullable = true, name = "code_postal")
 	private String codePostal;
 	
-	@Column( nullable=false , unique=true )
-	private String mail;
-
+	@Column( nullable = false , unique = true )
+	private String courriel;
 	
 	
-	
-	
-	public String getTel() {
-		return tel;
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
-	public String getRue() {
-		return rue;
+	public String getStreet() {
+		return street;
 	}
 
-	public void setRue(String rue) {
+	public void setStreet(String street) {
 		this.rue = rue;
 	}
-
-	public String getVille() {
-		return Ville;
-	}
-
-	public void setVille(String ville) {
-		Ville = ville;
-	}
-
-	public String getCodePostal() {
+	
+		public String getCodePostal() {
 		return codePostal;
 	}
 
@@ -58,18 +45,23 @@ public class Contact {
 		this.codePostal = codePostal;
 	}
 
-	public String getMail() {
-		return mail;
+	public String getCourriel() {
+		return courriel;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setCourriel(String courriel) {
+		this.courriel = courriel;
 	}
-	
-	
-	
-	
-	
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		city = city;
+	}
+
+
 	
 	
 }
