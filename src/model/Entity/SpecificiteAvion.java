@@ -31,8 +31,8 @@ public class SpecificiteAvion {
 	@Column(length = 45, name = "consommationMoyenne")
 	private int consommationMoyenne;
 
-	@Column(length = 45, name = "surConsommation")
-	private int surConsommation;
+	@Column(length = 45, name = "surconsommation")
+	private int surconsommation;
 	
 	public int getId() {
 		return id;
