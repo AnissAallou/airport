@@ -12,10 +12,10 @@ import javax.persistence.Id;
 public class Avion {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(length = 45 ,  nullable=false)
+	@Column(length = 50, nullable = false)
 	private String numero;
 	
 }
