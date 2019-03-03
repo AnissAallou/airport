@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 public class Passager extends Personne {
 	
 	
-	@Column(length = 45 ,  nullable=true)
+	@Column(length = 45, nullable = true)
 	private String nationalite;
 
 	public String getNationalite() {
@@ -22,7 +22,7 @@ public class Passager extends Personne {
 
 	
 	@ManyToOne
-	@JoinColumn(name="id_type_personnel", nullable = true)
+	@JoinColumn(name = "id_type_personnel", nullable = true)
 	private TypePersonnel typePersonnel;
 	
 }
