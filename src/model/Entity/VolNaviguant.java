@@ -13,14 +13,14 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Vol_Navigant")
-public class Vol_Navigant {
+@Table(name = "VolNaviguant")
+public class VolNaviguant {
 
 	 @EmbeddedId
-	 private Vol_NavigantId id;
+	 private IdVolNaviguant id;
 	
 	 @ManyToOne
-	 @MapsId("volId")
+	 @MapsId("idVol")
 	 private Vol vol;
 	 
 	 @ManyToOne
@@ -32,13 +32,13 @@ public class Vol_Navigant {
 	 
 	 
 	    @Override
-	    public boolean equals(Object o) {
-	        if (this == o) return true;
+	    public boolean equals(Object n) {
+	        if (this == n) return true;
 	 
-	        if (o == null || getClass() != o.getClass())
+	        if (n == null || getClass() != o.getClass())
 	            return false;
 	 
-	        Vol_Navigant that = (Vol_Navigant) o;
+	        VolNavigant that = (VolNavigant) o;
 	        return Objects.equals(vol, that.vol) &&
 	               Objects.equals(personne, that.personne);
 	    }
