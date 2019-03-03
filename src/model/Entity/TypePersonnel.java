@@ -12,57 +12,58 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Type_Personnel")
+@Table(name = "type_personnel")
 public class TypePersonnel {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(length = 45 ,  nullable=true)
+	@Column(length = 45, nullable = true)
 	private String nom;
 	
 	@OneToMany(mappedBy = "typePersonnel")
-	private List<NonNavigant> nonNavigants = new ArrayList<>();
+	private List<NonNaviguant> nonNaviguants = new ArrayList<>();
 	
 	@OneToMany(mappedBy = "typePersonnel")
-	private List<Navigant> navigants = new ArrayList<>();
+	private List<Naviguant> naviguants = new ArrayList<>();
 	
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
+	
 	public int getId() {
 		return id;
 	}
+	
+	public String getName() {
+		return name;
+	}
 
-	public List<NonNavigant> getNonNavigants() {
-		return nonNavigants;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<NonNaviguant> getNonNaviguants() {
+		return nonNaviguants;
 	}
 
 	public void setNonNavigants(List<NonNavigant> nonNavigants) {
 		this.nonNavigants = nonNavigants;
 	}
 	
-	public void addNonNavigant(NonNavigant nonNavigants ) {
-	 this.nonNavigants.add(nonNavigants);
+	public void addNonNaviguant(NonNaviguant nonNaviguants ) {
+		this.nonNaviguants.add(nonNaviguants);
 	}
 	
-	public List<Navigant> getNavigants() {
-		return navigants;
+	public List<Naviguant> getNaviguants() {
+		return naviguants;
 	}
 	
-	public void setNavigants(List<Navigant> navigants) {
-		this.navigants = navigants;
+	public void setNaviguants(List<Naviguant> naviguants) {
+		this.naviguants = naviguants;
 	}
 	
-	public void addNavigant(Navigant navigants ) {
-		 this.navigants.add(navigants);
-		}
+	public void addNaviguant(Naviguant naviguants ) {
+		 this.naviguants.add(naviguants);
+	}
 	
 	
 }
